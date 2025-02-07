@@ -1,0 +1,35 @@
+Project: Image Steganography
+
+->Overview:
+
+    This project is about hiding secret messages inside pictures using a method called steganography,
+    The goal is to embed/write a secret message into an image in such a way that the image looks unchanged,
+    Later, we can extract the hidden message from the image.
+
+->There are two main functions in this project:
+    Encoding: Hiding a message inside an image
+    Decoding: Extracting the hidden message from the image
+
+->Pixel:
+    A picture is made up of tiny dots called pixels
+    We change the smallest part of these pixels (called the "Least Significant Bit") to hide the message. 
+    Even though we make small changes to the pixels, the image still looks the same.
+
+->Encoding Process:
+    We take a BMP image and the secret message or file you want to hide,
+    The secret message is hidden inside the image’s pixels,
+    A new image is created with the secret message hidden inside.
+
+->Decoding Process:
+    We take the image with the hidden message (stego-image),
+    The hidden message is extracted from the pixels of the image
+    The message is written to a file.
+
+->command line arguments for encoding
+    ./a.out -e beautiful.bmp secret_file.txt output_file(optional)
+
+->Command line arguments for decoding
+    ./a.out -d stego.bmp output_file(optional)
+
+Run the encoding process to hide the message.
+Run the decoding process to extract the message.
